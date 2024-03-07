@@ -19,7 +19,10 @@
                         <p:inputText id="descripcion" value="#{unidadesMedidaController.selected.descripcion}" title="#{myBundle.CreateUnidadesMedidaTitle_descripcion}" size="100" maxlength="100"/>
 
                         <p:outputLabel value="#{myBundle.CreateUnidadesMedidaLabel_estado}" for="estado" />
-                        <p:inputText id="estado" value="#{unidadesMedidaController.selected.estado}" title="#{myBundle.CreateUnidadesMedidaTitle_estado}" size="20" maxlength="20"/>
+                        <p:selectOneRadio id="estado" value="#{unidadesMedidaController.selected.estado}">
+    <f:selectItem itemLabel="Medido" itemValue="Medido" />
+    <f:selectItem itemLabel="No Medido" itemValue="No Medido" />
+</p:selectOneRadio>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{unidadesMedidaController.saveNew}" value="#{myBundle.Save}" update="display,:UnidadesMedidaListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('UnidadesMedidaCreateDialog'));">
                         <p:confirm header="#{myBundle.ConfirmationHeader}" message="#{myBundle.ConfirmCreateMessage}" icon="ui-icon-alert"/>

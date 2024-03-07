@@ -22,7 +22,10 @@
                         <p:inputText id="nombreComercial" value="#{proveedoresController.selected.nombreComercial}" title="#{myBundle.CreateProveedoresTitle_nombreComercial}" size="100" maxlength="100"/>
 
                         <p:outputLabel value="#{myBundle.CreateProveedoresLabel_estado}" for="estado" />
-                        <p:inputText id="estado" value="#{proveedoresController.selected.estado}" title="#{myBundle.CreateProveedoresTitle_estado}" size="20" maxlength="20"/>
+                        <p:selectOneRadio id="estado" value="#{proveedoresController.selected.estado}">
+    <f:selectItem itemLabel="Activo" itemValue="Activo" />
+    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+</p:selectOneRadio>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{proveedoresController.saveNew}" value="#{myBundle.Save}" update="display,:ProveedoresListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('ProveedoresCreateDialog'));">
                         <p:confirm header="#{myBundle.ConfirmationHeader}" message="#{myBundle.ConfirmCreateMessage}" icon="ui-icon-alert"/>

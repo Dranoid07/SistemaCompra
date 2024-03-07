@@ -22,8 +22,10 @@
                         <p:inputText id="nombre" value="#{departamentosController.selected.nombre}" title="#{myBundle.EditDepartamentosTitle_nombre}" size="100" maxlength="100"/>
 
                         <p:outputLabel value="#{myBundle.EditDepartamentosLabel_estado}" for="estado" />
-                        <p:inputText id="estado" value="#{departamentosController.selected.estado}" title="#{myBundle.EditDepartamentosTitle_estado}" size="20" maxlength="20"/>
-                    </p:panelGrid>
+<p:selectOneRadio id="estado" value="#{departamentosController.selected.estado}">
+    <f:selectItem itemLabel="Activo" itemValue="Activo" />
+    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+</p:selectOneRadio>                    </p:panelGrid>
                     <p:commandButton actionListener="#{departamentosController.save}" value="#{myBundle.Save}" update="display,:DepartamentosListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('DepartamentosEditDialog'));">
                         <p:confirm header="#{myBundle.ConfirmationHeader}" message="#{myBundle.ConfirmEditMessage}" icon="ui-icon-alert"/>
                     </p:commandButton>

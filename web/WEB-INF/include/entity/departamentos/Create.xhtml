@@ -17,9 +17,15 @@
 
                         <p:outputLabel value="#{myBundle.CreateDepartamentosLabel_nombre}" for="nombre" />
                         <p:inputText id="nombre" value="#{departamentosController.selected.nombre}" title="#{myBundle.CreateDepartamentosTitle_nombre}" size="100" maxlength="100"/>
+                        <a href="Create.xhtml"></a>
 
                         <p:outputLabel value="#{myBundle.CreateDepartamentosLabel_estado}" for="estado" />
-                        <p:inputText id="estado" value="#{departamentosController.selected.estado}" title="#{myBundle.CreateDepartamentosTitle_estado}" size="20" maxlength="20"/>
+                       <p:selectOneRadio id="estado" value="#{departamentosController.selected.estado}" layout="lineDirection">
+            <f:selectItem itemLabel="Activo" itemValue="Activo" />
+    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+</p:selectOneRadio>   
+                    
+                    
                     </p:panelGrid>
                     <p:commandButton actionListener="#{departamentosController.saveNew}" value="#{myBundle.Save}" update="display,:DepartamentosListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('DepartamentosCreateDialog'));">
                         <p:confirm header="#{myBundle.ConfirmationHeader}" message="#{myBundle.ConfirmCreateMessage}" icon="ui-icon-alert"/>

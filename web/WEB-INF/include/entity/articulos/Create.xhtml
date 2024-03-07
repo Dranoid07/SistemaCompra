@@ -21,9 +21,11 @@
                         <p:outputLabel value="#{myBundle.CreateArticulosLabel_existencia}" for="existencia" />
                         <p:selectBooleanCheckbox id="existencia" value="#{articulosController.selected.existencia}" />
 
-                        <p:outputLabel value="#{myBundle.CreateArticulosLabel_estado}" for="estado" />
-                        <p:inputText id="estado" value="#{articulosController.selected.estado}" title="#{myBundle.CreateArticulosTitle_estado}" size="20" maxlength="20"/>
-
+<p:outputLabel value="#{myBundle.CreateArticulosLabel_estado}" for="estado" />
+                        <p:selectOneRadio id="estado" value="#{articulosController.selected.estado}">
+                        <f:selectItem itemLabel="Disponible" itemValue="Disponible" />
+                        <f:selectItem itemLabel="Agotado" itemValue="Agotado" />
+                        </p:selectOneRadio>
                         <p:outputLabel value="#{myBundle.CreateArticulosLabel_marcaId}" for="marcaId" />
                         <p:selectOneMenu id="marcaId" value="#{articulosController.selected.marcaId}"  converter="marcasConverter">
                             <f:selectItem itemLabel="#{myBundle.SelectOneMessage}"/>
