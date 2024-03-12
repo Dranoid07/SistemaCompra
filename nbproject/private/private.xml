@@ -3,39 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/facade/ArticulosFacade.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/mobile/template.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/LoginServlet.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/index.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/mobile/entity/articulos/Create.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/entity/Articulos.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/proveedores/Edit.xhtml</file>
             <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/controller/EmpleadosController.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/entity/Marcas.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/articulos/Create.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/resources/css/pfcrud.css</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/resources/scripts/pfcrud.js</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/mobile/articulos/index.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/controller/DepartamentosController.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/Login.html</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/welcomePrimefaces.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/mobile/appmenu.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/facade/LazyEntitySorter.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/template.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/mobile/proveedores/index.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/conf/MANIFEST.MF</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/conf/persistence.xml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/mobile/index.xhtml</file>
             <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/facade/EmpleadosFacade.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/controller/UnidadesMedidaController.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/confirmation.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/appmenu.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/proveedores/View.xhtml</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/empleados/Create.xhtml</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/proveedores/Create.xhtml</file>
             <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/MyBundle.properties</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/articulos/Create.xhtml</file>
             <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/controller/ProveedoresController.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/controller/ArticulosController.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/glassfish-resources.xml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/mobile/unidadesMedida/index.xhtml</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/resources/css/pfcrud.css</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/entity/Empleados.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/articulos/Edit.xhtml</file>
         </group>
     </open-files>
 </project-private>

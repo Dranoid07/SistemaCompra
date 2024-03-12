@@ -15,20 +15,39 @@
                     <p:panelGrid  columns="2" columnClasses="column" rendered="#{proveedoresController.selected != null}">
 
 
-                        <h:outputLabel value="#{myBundle.EditProveedoresLabel_id}" for="id" />
-                        <h:outputText id="id" value="#{proveedoresController.selected.id}" />
+                   <p:row>
+            <p:column>
+                <p:outputLabel value="#{myBundle.CreateProveedoresLabel_rnc}" for="rnc" />
+            </p:column>
+            <p:column>
+                <p:inputText id="rnc" value="#{proveedoresController.selected.rnc}" title="#{myBundle.CreateProveedoresTitle_rnc}" size="20" maxlength="20">
+                    <f:validateRegex pattern="[0-9]{9}" />
+                </p:inputText>
+                <p:message for="rnc" />
+            </p:column>
+        </p:row>
 
-                        <p:outputLabel value="#{myBundle.EditProveedoresLabel_rnc}" for="rnc" />
-                        <p:inputText id="rnc" value="#{proveedoresController.selected.rnc}" title="#{myBundle.EditProveedoresTitle_rnc}" size="20" maxlength="20"/>
+        <p:row>
+            <p:column>
+                <p:outputLabel value="#{myBundle.CreateProveedoresLabel_nombreComercial}" for="nombreComercial" />
+            </p:column>
+            <p:column>
+                <p:inputText id="nombreComercial" value="#{proveedoresController.selected.nombreComercial}" title="#{myBundle.CreateProveedoresTitle_nombreComercial}" size="100" maxlength="100"/>
+            </p:column>
+        </p:row>
 
-                        <p:outputLabel value="#{myBundle.EditProveedoresLabel_nombreComercial}" for="nombreComercial" />
-                        <p:inputText id="nombreComercial" value="#{proveedoresController.selected.nombreComercial}" title="#{myBundle.EditProveedoresTitle_nombreComercial}" size="100" maxlength="100"/>
-
-                        <p:outputLabel value="#{myBundle.EditProveedoresLabel_estado}" for="estado" />
-                        <p:selectOneRadio id="estado" value="#{proveedoresController.selected.estado}">
-                        <f:selectItem itemLabel="Activo" itemValue="Activo" />
-                        <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
-</p:selectOneRadio>
+     
+        <p:row>
+            <p:column>
+                <p:outputLabel value="#{myBundle.CreateProveedoresLabel_estado}" for="estado" />
+            </p:column>
+            <p:column>
+                <p:selectOneRadio id="estado" value="#{proveedoresController.selected.estado}">
+                    <f:selectItem itemLabel="Activo" itemValue="Activo" />
+                    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+                </p:selectOneRadio>
+            </p:column>
+        </p:row>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{proveedoresController.save}" value="#{myBundle.Save}" update="display,:ProveedoresListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('ProveedoresEditDialog'));">
                         <p:confirm header="#{myBundle.ConfirmationHeader}" message="#{myBundle.ConfirmEditMessage}" icon="ui-icon-alert"/>
