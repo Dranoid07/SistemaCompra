@@ -19,14 +19,14 @@
                         <h:outputText id="id" value="#{empleadosController.selected.id}" />
 
                         <p:outputLabel value="#{myBundle.EditEmpleadosLabel_cedula}" for="cedula" />
-    <p:inputText id="cedula" value="#{empleadosController.selected.cedula}" title="#{myBundle.CreateEmpleadosTitle_cedula}" size="20" maxlength="20">
-    <f:validator validatorId="com.jp.CedulaValidator"/>
-</p:inputText>
+                        <p:inputText id="cedula" value="#{empleadosController.selected.cedula}" title="#{myBundle.CreateEmpleadosTitle_cedula}" size="50" maxlength="50" placeholder="402-0868331-4" required="true">
+                        <f:validator validatorId="com.jp.CedulaValidator"/>
+                        </p:inputText>
                         <p:outputLabel value="#{myBundle.EditEmpleadosLabel_nombre}" for="nombre" />
-                        <p:inputText id="nombre" value="#{empleadosController.selected.nombre}" title="#{myBundle.EditEmpleadosTitle_nombre}" size="100" maxlength="100" required="true"/>
+                        <p:inputText id="nombre" value="#{empleadosController.selected.nombre}" title="#{myBundle.EditEmpleadosTitle_nombre}" size="50" maxlength="50" required="true"/>
 
                         <p:outputLabel value="#{myBundle.EditEmpleadosLabel_departamento}" for="departamento" />
-                        <p:inputText id="departamento" value="#{empleadosController.selected.departamento}" title="#{myBundle.EditEmpleadosTitle_departamento}" size="100" maxlength="100"/>
+                        <p:inputText id="departamento" value="#{empleadosController.selected.departamento}" title="#{myBundle.EditEmpleadosTitle_departamento}" size="50" maxlength="50"/>
 
                         <p:outputLabel value="#{myBundle.EditEmpleadosLabel_estado}" for="estado" />
             <p:selectOneRadio id="estado" value="#{empleadosController.selected.estado}" required="true">

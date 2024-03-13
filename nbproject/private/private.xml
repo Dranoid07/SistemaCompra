@@ -3,29 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/proveedores/Edit.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/LoginServlet.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/marcas/Edit.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/empleados/Create.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/proveedores/Create.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/jp/entity/UserBean.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/departamentos/Create.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/articulos/Edit.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/jp/validators/CedulaValidator.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/controller/EmpleadosController.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/facade/EmpleadosFacade.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/jp/validators/RncValidator.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/proveedores/View.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/unidadesMedida/Create.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/faces-config.xml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/empleados/Edit.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/MyBundle.properties</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/articulos/Create.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/controller/ProveedoresController.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/departamentos/Edit.xhtml</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/resources/css/pfcrud.css</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/src/java/com/entity/Empleados.java</file>
-            <file>file:/C:/Users/migue/OneDrive/Documentos/NetBeansProjects/WebApplication2/web/WEB-INF/include/entity/marcas/Create.xhtml</file>
+            <file>file:/C:/Users/harly/Desktop/SistemaCompra/web/WEB-INF/include/entity/departamentos/Create.xhtml</file>
+            <file>file:/C:/Users/harly/Desktop/SistemaCompra/web/WEB-INF/include/mobile/entity/proveedores/Create.xhtml</file>
+            <file>file:/C:/Users/harly/Desktop/SistemaCompra/web/WEB-INF/include/mobile/entity/articulos/Create.xhtml</file>
+            <file>file:/C:/Users/harly/Desktop/SistemaCompra/web/WEB-INF/include/entity/proveedores/Create.xhtml</file>
+            <file>file:/C:/Users/harly/Desktop/SistemaCompra/web/WEB-INF/include/entity/articulos/Create.xhtml</file>
+            <file>file:/C:/Users/harly/Desktop/SistemaCompra/web/WEB-INF/include/mobile/entity/departamentos/Create.xhtml</file>
+            <file>file:/C:/Users/harly/Desktop/SistemaCompra/web/WEB-INF/include/mobile/entity/articulos/Edit.xhtml</file>
         </group>
     </open-files>
 </project-private>
