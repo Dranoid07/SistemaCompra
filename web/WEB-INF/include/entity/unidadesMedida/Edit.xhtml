@@ -23,8 +23,8 @@
 
                         <p:outputLabel value="#{myBundle.EditUnidadesMedidaLabel_estado}" for="estado" />
                         <p:selectOneRadio id="estado" value="#{unidadesMedidaController.selected.estado}">
-    <f:selectItem itemLabel="Medido" itemValue="Medido" />
-    <f:selectItem itemLabel="No Medido" itemValue="No Medido" />
+    <f:selectItem itemLabel="Activo" itemValue="Activo" />
+    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
 </p:selectOneRadio>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{unidadesMedidaController.save}" value="#{myBundle.Save}" update="display,:UnidadesMedidaListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('UnidadesMedidaEditDialog'));">

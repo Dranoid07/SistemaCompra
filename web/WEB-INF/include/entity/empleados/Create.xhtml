@@ -16,18 +16,21 @@
                     <p:panelGrid columns="2" columnClasses="column">
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_cedula}" for="cedula" />
-                        <p:inputText id="cedula" value="#{empleadosController.selected.cedula}" title="#{myBundle.CreateEmpleadosTitle_cedula}" size="20" maxlength="20"/>
+                      <p:inputText id="cedula" value="#{empleadosController.selected.cedula}" title="#{myBundle.CreateEmpleadosTitle_cedula}" size="20" maxlength="20">
+    <f:validator validatorId="com.jp.CedulaValidator"/>
+</p:inputText>
+                        <h:message for="cedula" style="color:red"/>
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_nombre}" for="nombre" />
-                        <p:inputText id="nombre" value="#{empleadosController.selected.nombre}" title="#{myBundle.CreateEmpleadosTitle_nombre}" size="100" maxlength="100"/>
+                        <p:inputText id="nombre" value="#{empleadosController.selected.nombre}" title="#{myBundle.CreateEmpleadosTitle_nombre}" size="100" maxlength="100" required="true"/>
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_departamento}" for="departamento" />
-                        <p:inputText id="departamento" value="#{empleadosController.selected.departamento}" title="#{myBundle.CreateEmpleadosTitle_departamento}" size="100" maxlength="100"/>
+                        <p:inputText id="departamento" value="#{empleadosController.selected.departamento}" title="#{myBundle.CreateEmpleadosTitle_departamento}" size="100" maxlength="100" required="true"/>
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_estado}" for="estado" />
-                        <p:selectOneRadio id="estado" value="#{empleadosController.selected.estado}">
-                        <f:selectItem itemLabel="Activo" itemValue="Activo" />
-                        <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+                        <p:selectOneRadio id="estado" value="#{empleadosController.selected.estado}" required="true">
+                            <f:selectItem itemLabel="Activo" itemValue="Activo" />
+                            <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
                         </p:selectOneRadio>
                     </p:panelGrid>
                     <p:commandButton actionListener="#{empleadosController.saveNew}" value="#{myBundle.Save}" update="display,:EmpleadosListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('EmpleadosCreateDialog'));">

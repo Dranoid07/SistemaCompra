@@ -19,18 +19,18 @@
                         <h:outputText id="id" value="#{articulosController.selected.id}" />
 
                         <p:outputLabel value="#{myBundle.EditArticulosLabel_descripcion}" for="descripcion" />
-                        <p:inputText id="descripcion" value="#{articulosController.selected.descripcion}" title="#{myBundle.EditArticulosTitle_descripcion}" size="100" maxlength="100"/>
+                        <p:inputText id="descripcion" value="#{articulosController.selected.descripcion}" title="#{myBundle.EditArticulosTitle_descripcion}" size="100" maxlength="100" required="true"/>
 
                         <p:outputLabel value="#{myBundle.EditArticulosLabel_existencia}" for="existencia" />
                         <p:selectBooleanCheckbox id="existencia" value="#{articulosController.selected.existencia}" />
 
 <p:outputLabel value="#{myBundle.CreateArticulosLabel_estado}" for="estado" />
-                        <p:selectOneRadio id="estado" value="#{articulosController.selected.estado}">
+                        <p:selectOneRadio id="estado" value="#{articulosController.selected.estado}" required="true">
                         <f:selectItem itemLabel="Disponible" itemValue="Disponible" />
                         <f:selectItem itemLabel="Agotado" itemValue="Agotado" />
                         </p:selectOneRadio>
                         <p:outputLabel value="#{myBundle.EditArticulosLabel_marcaId}" for="marcaId" />
-                        <p:selectOneMenu id="marcaId" value="#{articulosController.selected.marcaId}"  converter="marcasConverter">
+                        <p:selectOneMenu id="marcaId" value="#{articulosController.selected.marcaId}"  converter="marcasConverter" required="true">
                             <f:selectItem itemLabel="#{myBundle.SelectOneMessage}"/>
                             <f:selectItems value="#{marcasController.items}"
                                            var="marcaIdItem"
@@ -41,7 +41,7 @@
                         </p:selectOneMenu>
 
                         <p:outputLabel value="#{myBundle.EditArticulosLabel_unidadMedidaId}" for="unidadMedidaId" />
-                        <p:selectOneMenu id="unidadMedidaId" value="#{articulosController.selected.unidadMedidaId}"  converter="unidadesMedidaConverter">
+                        <p:selectOneMenu id="unidadMedidaId" value="#{articulosController.selected.unidadMedidaId}"  converter="unidadesMedidaConverter" required="true">
                             <f:selectItem itemLabel="#{myBundle.SelectOneMessage}"/>
                             <f:selectItems value="#{unidadesMedidaController.items}"
                                            var="unidadMedidaIdItem"

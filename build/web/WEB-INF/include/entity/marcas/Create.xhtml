@@ -16,10 +16,10 @@
                     <p:panelGrid columns="2" columnClasses="column">
 
                         <p:outputLabel value="#{myBundle.CreateMarcasLabel_descripcion}" for="descripcion" />
-                        <p:inputText id="descripcion" value="#{marcasController.selected.descripcion}" title="#{myBundle.CreateMarcasTitle_descripcion}" size="100" maxlength="100"/>
+                        <p:inputText id="descripcion" value="#{marcasController.selected.descripcion}" title="#{myBundle.CreateMarcasTitle_descripcion}" size="100" maxlength="100" required="true"/>
 
                         <p:outputLabel value="#{myBundle.CreateMarcasLabel_estado}" for="estado" />
-                        <p:selectOneRadio id="estado" value="#{marcasController.selected.estado}">
+                        <p:selectOneRadio id="estado" value="#{marcasController.selected.estado}" required="true">
     <f:selectItem itemLabel="Activo" itemValue="Activo" />
     <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
 </p:selectOneRadio>

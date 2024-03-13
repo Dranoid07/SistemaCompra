@@ -19,9 +19,10 @@
                         <p:outputLabel value="#{myBundle.CreateProveedoresLabel_rnc}" for="rnc" />
                     </p:column>
                     <p:column>
-                        <p:inputText id="rnc" value="#{proveedoresController.selected.rnc}" title="#{myBundle.CreateProveedoresTitle_rnc}" size="20" maxlength="20">
-                            <f:validateRegex pattern="[0-9]{9}" />
-                        </p:inputText>
+                       <p:inputText id="rnc" value="#{proveedoresController.selected.rnc}" title="#{myBundle.CreateProveedoresTitle_rnc}" size="20" maxlength="20" validator="com.jp.RncValidator">
+    <p:message for="rnc" />
+</p:inputText>
+
                         <p:message for="rnc" />
                     </p:column>
                 </p:row>
@@ -31,7 +32,7 @@
                         <p:outputLabel value="#{myBundle.CreateProveedoresLabel_nombreComercial}" for="nombreComercial" />
                     </p:column>
                     <p:column>
-                        <p:inputText id="nombreComercial" value="#{proveedoresController.selected.nombreComercial}" title="#{myBundle.CreateProveedoresTitle_nombreComercial}" size="100" maxlength="100"/>
+                        <p:inputText id="nombreComercial" value="#{proveedoresController.selected.nombreComercial}" title="#{myBundle.CreateProveedoresTitle_nombreComercial}" size="100" maxlength="100" required="true"/>
                     </p:column>
                 </p:row>
 
