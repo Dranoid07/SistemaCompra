@@ -16,8 +16,7 @@
                     <p:panelGrid columns="2" columnClasses="column">
 
                         <p:outputLabel value="#{myBundle.CreateDepartamentosLabel_nombre}" for="nombre" />
-                        <p:inputText id="nombre" value="#{departamentosController.selected.nombre}" title="#{myBundle.CreateDepartamentosTitle_nombre}" size="100" maxlength="100" required="true"/>
-                        <a href="Create.xhtml"></a>
+                        <p:inputText id="nombre" value="#{departamentosController.selected.nombre}" title="#{myBundle.CreateDepartamentosTitle_nombre}" size="50" maxlength="50" required="true"/>
 
                         <p:outputLabel value="#{myBundle.CreateDepartamentosLabel_estado}" for="estado" />
                        <p:selectOneRadio id="estado" value="#{departamentosController.selected.estado}" layout="lineDirection" required="true">

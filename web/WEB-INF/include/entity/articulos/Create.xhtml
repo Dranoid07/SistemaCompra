@@ -15,11 +15,11 @@
                 <h:panelGroup id="display" rendered="#{articulosController.selected != null}">
                     <p:panelGrid columns="2" columnClasses="column">
 
-                        <p:outputLabel value="#{myBundle.CreateArticulosLabel_descripcion}" for="descripcion" required="true"/>
-                        <p:inputText id="descripcion" value="#{articulosController.selected.descripcion}" title="#{myBundle.CreateArticulosTitle_descripcion}" size="100" maxlength="100"/>
+                        <p:outputLabel value="#{myBundle.CreateArticulosLabel_descripcion}" for="descripcion"/>
+                        <p:inputText id="descripcion" value="#{articulosController.selected.descripcion}" title="#{myBundle.CreateArticulosTitle_descripcion}" size="100" maxlength="100" required="true"/>
 
                         <p:outputLabel value="#{myBundle.CreateArticulosLabel_existencia}" for="existencia" />
-                        <p:selectBooleanCheckbox id="existencia" value="#{articulosController.selected.existencia}" />
+                        <p:selectBooleanCheckbox id="existencia" value="#{articulosController.selected.existencia}"/>
 
 <p:outputLabel value="#{myBundle.CreateArticulosLabel_estado}" for="estado" />
                         <p:selectOneRadio id="estado" value="#{articulosController.selected.estado}" required="true">

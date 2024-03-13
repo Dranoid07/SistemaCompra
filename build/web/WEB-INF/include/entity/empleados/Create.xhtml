@@ -13,19 +13,19 @@
             <h:form id="EmpleadosCreateForm">
 
                 <h:panelGroup id="display" rendered="#{empleadosController.selected != null}">
-                    <p:panelGrid columns="2" columnClasses="column">
+                    <p:panelGrid columns="1" columnClasses="column">
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_cedula}" for="cedula" />
-                      <p:inputText id="cedula" value="#{empleadosController.selected.cedula}" title="#{myBundle.CreateEmpleadosTitle_cedula}" size="20" maxlength="20">
-    <f:validator validatorId="com.jp.CedulaValidator"/>
-</p:inputText>
+                        <p:inputText id="cedula" value="#{empleadosController.selected.cedula}" title="#{myBundle.CreateEmpleadosTitle_cedula}" size="50" maxlength="50"  placeholder="402-0868331-4" required="true">
+                        <f:validator validatorId="com.jp.CedulaValidator"/>
+                      </p:inputText>
                         <h:message for="cedula" style="color:red"/>
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_nombre}" for="nombre" />
-                        <p:inputText id="nombre" value="#{empleadosController.selected.nombre}" title="#{myBundle.CreateEmpleadosTitle_nombre}" size="100" maxlength="100" required="true"/>
+                        <p:inputText id="nombre" value="#{empleadosController.selected.nombre}" title="#{myBundle.CreateEmpleadosTitle_nombre}" size="50" maxlength="50" required="true"/>
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_departamento}" for="departamento" />
-                        <p:inputText id="departamento" value="#{empleadosController.selected.departamento}" title="#{myBundle.CreateEmpleadosTitle_departamento}" size="100" maxlength="100" required="true"/>
+                        <p:inputText id="departamento" value="#{empleadosController.selected.departamento}" title="#{myBundle.CreateEmpleadosTitle_departamento}" size="50" maxlength="50" required="true"/>
 
                         <p:outputLabel value="#{myBundle.CreateEmpleadosLabel_estado}" for="estado" />
                         <p:selectOneRadio id="estado" value="#{empleadosController.selected.estado}" required="true">

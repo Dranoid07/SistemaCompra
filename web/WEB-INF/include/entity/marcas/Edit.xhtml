@@ -19,13 +19,13 @@
                         <h:outputText id="id" value="#{marcasController.selected.id}" />
 
                         <p:outputLabel value="#{myBundle.EditMarcasLabel_descripcion}" for="descripcion" />
-                        <p:inputText id="descripcion" value="#{marcasController.selected.descripcion}" title="#{myBundle.EditMarcasTitle_descripcion}" size="100" maxlength="100" required="true"/>
+                        <p:inputText id="descripcion" value="#{marcasController.selected.descripcion}" title="#{myBundle.EditMarcasTitle_descripcion}" size="50" maxlength="50" required="true"/>
 
                         <p:outputLabel value="#{myBundle.EditMarcasLabel_estado}" for="estado" />
                         <p:selectOneRadio id="estado" value="#{marcasController.selected.estado}" required="true">
-    <f:selectItem itemLabel="Activo" itemValue="Activo" />
-    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
-</p:selectOneRadio>
+                        <f:selectItem itemLabel="Activo" itemValue="Activo" />
+                        <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+                        </p:selectOneRadio>
 
                     </p:panelGrid>
                     <p:commandButton actionListener="#{marcasController.save}" value="#{myBundle.Save}" update="display,:MarcasListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('MarcasEditDialog'));">

@@ -13,43 +13,26 @@
             <h:form id="ProveedoresCreateForm">
 
       <h:panelGroup id="display" rendered="#{proveedoresController.selected != null}">
-            <p:panelGrid columns="2" columnClasses="column">
-                <p:row>
-                    <p:column>
+            <p:panelGrid columns="1" columnClasses="column">
+
                         <p:outputLabel value="#{myBundle.CreateProveedoresLabel_rnc}" for="rnc" />
-                    </p:column>
-                    <p:column>
-                       <p:inputText id="rnc" value="#{proveedoresController.selected.rnc}" title="#{myBundle.CreateProveedoresTitle_rnc}" size="20" maxlength="20" validator="com.jp.RncValidator">
-    <p:message for="rnc" />
-</p:inputText>
-
+                       <p:inputText id="rnc" value="#{proveedoresController.selected.rnc}" title="#{myBundle.CreateProveedoresTitle_rnc}" size="50" maxlength="50" validator="com.jp.RncValidator" required="true"/>
                         <p:message for="rnc" />
-                    </p:column>
-                </p:row>
+                        
+                        <p:outputLabel value="#{myBundle.CreateProveedoresLabel_nombreComercial}" for="nombreComercial" />              
+                        <p:inputText id="nombreComercial" value="#{proveedoresController.selected.nombreComercial}" title="#{myBundle.CreateProveedoresTitle_nombreComercial}" size="50" maxlength="50" required="true"/>
+                    
+                
 
-                <p:row>
-                    <p:column>
-                        <p:outputLabel value="#{myBundle.CreateProveedoresLabel_nombreComercial}" for="nombreComercial" />
-                    </p:column>
-                    <p:column>
-                        <p:inputText id="nombreComercial" value="#{proveedoresController.selected.nombreComercial}" title="#{myBundle.CreateProveedoresTitle_nombreComercial}" size="100" maxlength="100" required="true"/>
-                    </p:column>
-                </p:row>
-
-                <p:row>
-                    <p:column>
+                
+                    
                         <p:outputLabel value="#{myBundle.CreateProveedoresLabel_estado}" for="estado" />
-                    </p:column>
-                    <p:column>
                         <p:selectOneRadio id="estado" value="#{proveedoresController.selected.estado}">
                             <f:selectItem itemLabel="Activo" itemValue="Activo" />
                             <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
                         </p:selectOneRadio>
-                    </p:column>
-                </p:row>
+                
             </p:panelGrid>
-
-            <p:message for="rnc" />
 
             <p:commandButton actionListener="#{proveedoresController.saveNew}" value="#{myBundle.Save}" update="display,:ProveedoresListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('ProveedoresCreateDialog'));">
                 <p:confirm header="#{myBundle.ConfirmationHeader}" message="#{myBundle.ConfirmCreateMessage}" icon="ui-icon-alert"/>
