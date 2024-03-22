@@ -69,6 +69,17 @@
 
 
             </p:dataTable>
+            
+            <h3>Exporta los datos visibles en la tabla</h3>
+            <h:commandLink>
+                <p:graphicImage name="/img/Excel.jpg" height="32px" width="32px"/>
+                <p:dataExporter type="xls" target="datalist" fileName="Marcas" pageOnly="true"/>
+            </h:commandLink>
+            
+            <h:commandLink>
+                <p:graphicImage name="/img/Pdf.jpg" width="32px" height="32px"/>
+                <p:dataExporter type="pdf" target="datalist" fileName="Marcas" pageOnly="true" />
+            </h:commandLink>
 
             <p:commandButton id="createButton"                             icon="ui-icon-plus"   value="#{myBundle.Create}" actionListener="#{marcasController.prepareCreate}" update=":MarcasCreateForm" oncomplete="PF('MarcasCreateDialog').show()"/>
             <p:commandButton id="viewButton"   style="visibility: hidden;" icon="ui-icon-search" value="#{myBundle.View}" update=":MarcasViewForm" oncomplete="PF('MarcasViewDialog').show()" disabled="#{empty marcasController.selected}"/>
