@@ -95,7 +95,19 @@
 
 
             </p:dataTable>
-
+            
+            <h3>Exporta los datos visibles en la tabla</h3>
+            <h:commandLink>
+                <p:graphicImage name="/img/Excel.jpg" height="32px" width="32px"/>
+                <p:dataExporter type="xls" target="datalist" fileName="Articulos" pageOnly="true"/>
+            </h:commandLink>
+            
+            <h:commandLink>
+                <p:graphicImage name="/img/Pdf.jpg" width="32px" height="32px"/>
+                <p:dataExporter type="pdf" target="datalist" fileName="Articulos" pageOnly="true" />
+            </h:commandLink>
+            
+            
             <p:commandButton id="createButton"                             icon="ui-icon-plus"   value="#{myBundle.Create}" actionListener="#{articulosController.prepareCreate}" update=":ArticulosCreateForm" oncomplete="PF('ArticulosCreateDialog').show()"/>
             <p:commandButton id="viewButton"   style="visibility: hidden;" icon="ui-icon-search" value="#{myBundle.View}" update=":ArticulosViewForm" oncomplete="PF('ArticulosViewDialog').show()" disabled="#{empty articulosController.selected}"/>
             <p:commandButton id="editButton"   style="visibility: hidden;" icon="ui-icon-pencil" value="#{myBundle.Edit}" update=":ArticulosEditForm" oncomplete="PF('ArticulosEditDialog').show()" disabled="#{empty articulosController.selected}"/>
