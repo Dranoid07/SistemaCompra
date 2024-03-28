@@ -20,9 +20,9 @@
 
                         <p:outputLabel value="#{myBundle.CreateMarcasLabel_estado}" for="estado" />
                         <p:selectOneRadio id="estado" value="#{marcasController.selected.estado}" required="true">
-    <f:selectItem itemLabel="Activo" itemValue="Activo" />
-    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
-</p:selectOneRadio>
+                        <f:selectItem itemLabel="Disponible" itemValue="Disponible" />
+                        <f:selectItem itemLabel="No Disponible" itemValue="No Disponible" />
+                    </p:selectOneRadio>
 
                     </p:panelGrid>
                     <p:commandButton actionListener="#{marcasController.saveNew}" value="#{myBundle.Save}" update="display,:MarcasListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('MarcasCreateDialog'));">

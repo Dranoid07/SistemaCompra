@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="SolicitudArticulosCreateDlg" widgetVar="SolicitudArticulosCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{myBundle.CreateSolicitudArticulosTitle}" closeOnEscape="true">
+
+            <h:form id="SolicitudArticulosCreateForm">
+
+                <h:panelGroup id="display" rendered="#{solicitudArticulosController.selected != null}">
+                    <p:panelGrid columns="2" columnClasses="column">
+
+                        <p:outputLabel value="#{myBundle.CreateSolicitudArticulosLabel_empleadoSolicitante}" for="empleadoSolicitante" />
+                        <p:inputText id="empleadoSolicitante" value="#{solicitudArticulosController.selected.empleadoSolicitante}" title="#{myBundle.CreateSolicitudArticulosTitle_empleadoSolicitante}" size="100" maxlength="100"/>
+
+                        <p:outputLabel value="#{myBundle.CreateSolicitudArticulosLabel_fechaSolicitud}" for="fechaSolicitud" />
+                        <p:calendar id="fechaSolicitud" pattern="MM/dd/yyyy" value="#{solicitudArticulosController.selected.fechaSolicitud}" title="#{myBundle.CreateSolicitudArticulosTitle_fechaSolicitud}"  showOn="button"/>
+
+                        <p:outputLabel value="#{myBundle.CreateSolicitudArticulosLabel_cantidad}" for="cantidad" />
+                        <p:inputText id="cantidad" value="#{solicitudArticulosController.selected.cantidad}" title="#{myBundle.CreateSolicitudArticulosTitle_cantidad}"/>
+
+                        <p:outputLabel value="#{myBundle.CreateSolicitudArticulosLabel_estado}" for="estado" />
+                        <p:selectOneRadio id="estado" value="#{solicitudArticulosController.selected.estado}" required="true">
+                        <f:selectItem itemValue="Pendiente" itemLabel="Pendiente" />
+                        <f:selectItem itemValue="Aprobada" itemLabel="Aprobada" />
+                        <f:selectItem itemValue="Denegada" itemLabel="Denegada" />
+                        </p:selectOneRadio>
+
+
+                        <p:outputLabel value="#{myBundle.CreateSolicitudArticulosLabel_articuloId}" for="articuloId" />
+                        <p:selectOneMenu id="articuloId" value="#{solicitudArticulosController.selected.articuloId}"  converter="articulosConverter">
+                            <f:selectItem itemLabel="#{myBundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{articulosController.items}"
+                                           var="articuloIdItem"
+                                           itemValue="#{articuloIdItem}"
+                                           itemLabel="#{articuloIdItem.descripcion.toString()}"
+                                           />
+
+                        </p:selectOneMenu>
+
+                        <p:outputLabel value="#{myBundle.CreateSolicitudArticulosLabel_unidadMedidaId}" for="unidadMedidaId" />
+                        <p:selectOneMenu id="unidadMedidaId" value="#{solicitudArticulosController.selected.unidadMedidaId}"  converter="unidadesMedidaConverter">
+                            <f:selectItem itemLabel="#{myBundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{unidadesMedidaController.items}"
+                                           var="unidadMedidaIdItem"
+                                           itemValue="#{unidadMedidaIdItem}"
+                                           itemLabel="#{unidadMedidaIdItem.descripcion.toString()}"
+                                           />
+
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{solicitudArticulosController.saveNew}" value="#{myBundle.Save}" update="display,:SolicitudArticulosListForm:datalist,:growl" oncomplete="handleSubmit(xhr,status,args,PF('SolicitudArticulosCreateDialog'));">
+                        <p:confirm header="#{myBundle.ConfirmationHeader}" message="#{myBundle.ConfirmCreateMessage}" icon="ui-icon-alert"/>
+                    </p:commandButton>
+
+                    <p:commandButton value="#{myBundle.Cancel}" oncomplete="PF('SolicitudArticulosCreateDialog').hide()" update="display" process="@this" immediate="true" resetValues="true"/>
+                </h:panelGroup>
+
+            </h:form>
+
+        </p:dialog>
+
+    </ui:composition>
+
+</html>

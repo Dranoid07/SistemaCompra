@@ -211,6 +211,5 @@ public abstract class AbstractFacade<T> {
 
     public T findWithParents(T entity) {
         return entity;
-    }
-    
+    }  
 }

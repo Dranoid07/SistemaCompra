@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pm="http://primefaces.org/mobile">
+
+    <pm:page id="OrdenCompraViewPage" lazy="true">
+        <pm:header title="#{myBundle.ViewOrdenCompraTitle}">
+            <h:form>
+                <p:commandButton styleClass="ui-btn-left ui-btn-inline" value="#{myBundle.Cancel}" icon="ui-icon-arrow-l" action="#{mobilePageController.navigateBackInHistory('pm:OrdenCompraListPage')}"/>
+            </h:form>
+        </pm:header>
+
+        <pm:content>
+
+            <h:form id="OrdenCompraViewForm">
+
+                <h:panelGroup id="display">
+                    <p:outputPanel rendered="#{ordenCompraController.selected != null}">
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_numeroOrden}"/>
+                            <h:outputText value="#{ordenCompraController.selected.numeroOrden}" title="#{myBundle.ViewOrdenCompraTitle_numeroOrden}"/>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_fechaOrden}"/>
+                            <h:outputText value="#{ordenCompraController.selected.fechaOrden}" title="#{myBundle.ViewOrdenCompraTitle_fechaOrden}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_estado}"/>
+                            <h:outputText value="#{ordenCompraController.selected.estado}" title="#{myBundle.ViewOrdenCompraTitle_estado}"/>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_cantidad}"/>
+                            <h:outputText value="#{ordenCompraController.selected.cantidad}" title="#{myBundle.ViewOrdenCompraTitle_cantidad}"/>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_costoUnitario}"/>
+                            <h:outputText value="#{ordenCompraController.selected.costoUnitario}" title="#{myBundle.ViewOrdenCompraTitle_costoUnitario}"/>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_articuloId}"/>
+                            <h:outputText value="#{ordenCompraController.selected.articuloId.descripcion}"/>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_marcaId}"/>
+                            <h:outputText value="#{ordenCompraController.selected.marcaId.descripcion}"/>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_solicitudId}"/>
+                            <h:outputText value="#{ordenCompraController.selected.solicitudId.id}"/>
+                        </pm:field>
+
+                        <pm:field>
+                            <h:outputText value="#{myBundle.ViewOrdenCompraLabel_unidadMedidaId}"/>
+                            <h:outputText value="#{ordenCompraController.selected.unidadMedidaId.descripcion}"/>
+                        </pm:field>
+                    </p:outputPanel>
+                </h:panelGroup>
+
+            </h:form>
+
+        </pm:content>
+
+    </pm:page>
+
+</ui:composition>
